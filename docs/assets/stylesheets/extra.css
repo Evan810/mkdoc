@@ -1,0 +1,63 @@
+/* ============================================================
+   自定义样式 - 我的学习笔记
+   ============================================================ */
+
+/* 分类卡片网格 */
+.md-typeset .grid.cards > ul > li {
+  border-radius: .5rem;
+  border: 1px solid var(--md-typeset-table-color);
+  transition: border-color .2s, box-shadow .2s;
+}
+.md-typeset .grid.cards > ul > li:hover {
+  border-color: var(--md-accent-fg-color);
+  box-shadow: 0 0 1.5rem rgba(0,0,0,0.1);
+}
+
+/* 代码块内边距微调 */
+.md-typeset pre > code {
+  padding: 0.85em 1em;
+}
+
+/* 侧边栏导航项稍微紧凑 */
+.md-nav__link {
+  font-size: 0.93rem;
+}
+
+/* 标题锚点悬停显示 */
+.md-typeset .headerlink {
+  opacity: 0;
+  transition: opacity .2s;
+}
+.md-typeset h1:hover .headerlink,
+.md-typeset h2:hover .headerlink,
+.md-typeset h3:hover .headerlink,
+.md-typeset h4:hover .headerlink {
+  opacity: 0.7;
+}
+
+/* Hero 区域 */
+.hero {
+  text-align: center;
+  padding: 4rem 1rem 2rem;
+  margin-bottom: 2rem;
+}
+.hero h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+.hero p.hero__subtitle {
+  font-size: 1.1rem;
+  color: var(--md-typeset-color);
+  opacity: 0.7;
+}
+
+/* 暗色模式 Hero 调整 */
+[data-md-color-scheme="slate"] .hero p.hero__subtitle {
+  color: rgba(255,255,255,0.6);
+}
+
+/* 首页隐藏侧边栏时的内容宽度 */
+.md-content--hidden {
+  max-width: 70rem !important;
+}

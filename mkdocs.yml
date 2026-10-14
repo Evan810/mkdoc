@@ -1,0 +1,207 @@
+# ============================================================
+# 我的学习笔记 - MkDocs Material 配置
+# ============================================================
+site_name: 我的学习笔记
+site_description: 个人学习记录，涵盖前端、后端、Python、网络安全、数据建模等
+site_url: https://your-username.github.io/your-repo/
+
+# 仓库链接（填入实际地址后启用）
+# repo_url: https://github.com/your-username/your-repo
+# repo_name: GitHub
+# edit_uri: edit/main/docs/
+
+copyright: Copyright &copy; 2025-2026 Your Name
+
+# ============================================================
+# 主题配置
+# ============================================================
+theme:
+  name: material
+  language: zh
+  font:
+    text: Inter
+    code: JetBrains Mono
+
+  icon:
+    logo: material/book-open-page-variant
+    favicon: material/book-open-page-variant
+    repo: fontawesome/brands/github
+
+  features:
+    # --- 导航 ---
+    - navigation.instant
+    - navigation.instant.prefetch
+    - navigation.instant.progress
+    - navigation.tracking
+    - navigation.expand
+    - navigation.path
+    - navigation.indexes
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.sections
+    - navigation.top
+    - navigation.footer
+    # --- 搜索 ---
+    - search.highlight
+    - search.suggestions
+    - search.share
+    # --- TOC ---
+    - toc.follow
+    - toc.sticky
+    # --- 内容 ---
+    - content.code.copy
+    - content.code.annotate
+    - content.tabs.link
+    - content.tooltips
+
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-7
+        name: 切换暗色模式
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-4
+        name: 切换亮色模式
+    - scheme: default
+      toggle:
+        icon: material/brightness-7
+        name: 切换暗色模式
+    - scheme: slate
+      toggle:
+        icon: material/brightness-4
+        name: 切换亮色模式
+
+  custom_dir: overrides
+
+# ============================================================
+# Markdown 扩展
+# ============================================================
+markdown_extensions:
+  - abbr
+  - admonition
+  - attr_list
+  - def_list
+  - footnotes
+  - md_in_html
+  - tables
+  - toc:
+      permalink: true
+      permalink_title: "Permalink to this heading"
+      toc_depth: 4
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.caret
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tilde
+
+# ============================================================
+# 插件
+# ============================================================
+plugins:
+  - blog:
+      blog_dir: blog
+      post_dir: "{blog}/posts"
+      categories: true
+      pagination: true
+      pagination_per_page: 10
+  - tags
+  - search
+  - social
+  - rss:
+      feed_ttl: 1440
+  - git-revision-date-localized:
+      type: datetime
+      locale: zh
+      fallback_to_build_date: true
+      enable_creation_date: true
+      exclude:
+        - index.md
+        - tags.md
+
+# ============================================================
+# 导航
+# ============================================================
+nav:
+  - 首页: index.md
+  - 前端开发:
+      - React: front-end/react.md
+      - Vue: front-end/vue.md
+      - TypeScript: front-end/typescript.md
+      - 工程化:
+          - Vite: front-end/engineering/vite.md
+          - Webpack: front-end/engineering/webpack.md
+  - 后端开发:
+      - SpringBoot:
+          - 集成技术: back-end/springboot/integrate-tech.md
+          - RabbitMQ: back-end/springboot/rabbitmq.md
+          - ElasticSearch: back-end/springboot/elasticsearch.md
+          - MyBatis-Plus: back-end/springboot/mybatis-plus.md
+          - 项目模板: back-end/springboot/springboot-template.md
+      - Node.js:
+          - Express: back-end/nodejs/express.md
+          - NestJS: back-end/nodejs/nestjs.md
+  - Python:
+      - 基础语法: python/basic.md
+      - 爬虫: python/spider.md
+      - Django: python/django.md
+      - 数据分析: python/data-analysis.md
+  - 网络安全:
+      - 信息收集: net-sec/info-collect.md
+      - Web 攻防: net-sec/web-aad.md
+      - 内网渗透: net-sec/intranet-penetration.md
+      - 漏洞复现: net-sec/vuln-repro.md
+  - 数学建模:
+      - 数据分析: math-model/data-analysis.md
+      - 评价类模型: math-model/evaluation.md
+      - 预测类模型: math-model/forecast.md
+      - 优化类模型: math-model/optimization.md
+      - 分类模型: math-model/classification.md
+  - 实战项目:
+      - B站爬虫: projects/bilibili-spider.md
+      - 练通爬取: projects/dlt-spider.md
+  - 教程与工具:
+      - 教程:
+          - Electron 打包: tutorials/electron-package.md
+          - MkDocs 搭建: tutorials/mkdocs-setup.md
+      - 工具:
+          - Git: tools/git.md
+          - Docker: tools/docker.md
+          - Linux: tools/linux.md
+          - 图标库: tools/icons.md
+          - 小知识: tools/tips.md
+  - Blog: blog/index.md
+  - Tags: tags.md
+
+# ============================================================
+# 额外配置
+# ============================================================
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/your-username
+      name: GitHub

@@ -1,0 +1,10 @@
+[project]
+name = "mkdoc"
+version = "0.1.0"
+requires-python = ">=3.13"
+dependencies = [
+    "mkdocs-git-revision-date-localized-plugin>=1.6.0",
+    "mkdocs-material>=9.7.7",
+    "mkdocs-rss-plugin>=1.19.0",
+    "pymdown-extensions>=12.2",
+]
