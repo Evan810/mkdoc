@@ -1,8 +1,6 @@
 ---
 title: 关于这个网站
 date: 2026-10-14
-authors:
-  - Your Name
 categories:
   - 随笔
 tags:
