@@ -1,5 +1,7 @@
 ---
 title: Python 分类
+tags:
+  - Python
 ---
 
 ## Python

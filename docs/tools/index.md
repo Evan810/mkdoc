@@ -1,5 +1,7 @@
 ---
 title: 工具分类
+tags:
+  - 工具
 ---
 
 ## 工具 / Tools
@@ -12,7 +14,8 @@ title: 工具分类
 ### 主要工具
 
 - [Git](git.md) —— 版本控制
-- [Docker](docker.md) —— 容器化
+- [Docker](docker.md) —— 容器化部署
+- [UV](uv.md) —— Python 包管理工具
 - [Linux 命令](linux.md) —— Shell 常用命令
 - [图标资源](icons.md) —— 图标库与使用
 - [开发小贴士](tips.md) —— 零散技巧合集

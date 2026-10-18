@@ -3,7 +3,7 @@
 # ============================================================
 site_name: 磊哥的学习笔记
 site_description: 个人学习记录，涵盖前端、后端、Python、网络安全、数据建模等
-site_url: https://your-username.github.io/your-repo/
+site_url: https://evan810.github.io/mkdoc/
 
 # 仓库链接（填入实际地址后启用）
 # repo_url: https://github.com/your-username/your-repo
@@ -135,14 +135,14 @@ plugins:
   # - social  # 社交卡片（需要 Cairo 原生库，Windows 上暂时禁用）
   - rss:
       feed_ttl: 1440
-  - git-revision-date-localized:
-      type: datetime
-      locale: zh
-      fallback_to_build_date: true
-      enable_creation_date: true
-      exclude:
-        - index.md
-        - tags.md
+  # - git-revision-date-localized:  # 不需要显示创建/修改时间
+  #     type: datetime
+  #     locale: zh
+  #     fallback_to_build_date: true
+  #     enable_creation_date: true
+  #     exclude:
+  #       - index.md
+  #       - tags.md
 
 # ============================================================
 # 导航
@@ -150,48 +150,53 @@ plugins:
 nav:
   - 首页: index.md
   - 前端开发:
+      - 前端开发首页: front-end/index.md
       - React: front-end/react.md
       - Vue: front-end/vue.md
       - TypeScript: front-end/typescript.md
       - 工程化:
+          - 工程化首页: front-end/engineering/index.md
           - Vite: front-end/engineering/vite.md
           - Webpack: front-end/engineering/webpack.md
-  - 后端开发:
+  - 后端开发: 
+      - 后端开发首页: back-end/index.md
       - SpringBoot:
+          - SpringBoot 首页: back-end/springboot/index.md
           - 集成技术: back-end/springboot/integrate-tech.md
           - RabbitMQ: back-end/springboot/rabbitmq.md
           - ElasticSearch: back-end/springboot/elasticsearch.md
           - MyBatis-Plus: back-end/springboot/mybatis-plus.md
           - 项目模板: back-end/springboot/springboot-template.md
       - Node.js:
+          - Node.js 首页: back-end/nodejs/index.md
           - Express: back-end/nodejs/express.md
           - NestJS: back-end/nodejs/nestjs.md
   - Python:
+      - Python 首页: python/index.md
       - 基础语法: python/basic.md
       - 爬虫: python/spider.md
       - Django: python/django.md
       - 数据分析: python/data-analysis.md
   - 网络安全:
+      - 网络安全首页: net-sec/index.md
       - 信息收集: net-sec/info-collect.md
       - Web 攻防: net-sec/web-aad.md
       - 内网渗透: net-sec/intranet-penetration.md
       - 漏洞复现: net-sec/vuln-repro.md
-  - 数学建模:
-      - 数据分析: math-model/data-analysis.md
-      - 评价类模型: math-model/evaluation.md
-      - 预测类模型: math-model/forecast.md
-      - 优化类模型: math-model/optimization.md
-      - 分类模型: math-model/classification.md
   - 实战项目:
+      - 实战项目首页: projects/index.md
       - B站爬虫: projects/bilibili-spider.md
       - 练通爬取: projects/dlt-spider.md
   - 教程与工具:
       - 教程:
+          - 教程首页: tutorials/index.md
           - Electron 打包: tutorials/electron-package.md
           - MkDocs 搭建: tutorials/mkdocs-setup.md
       - 工具:
+          - 工具首页: tools/index.md
           - Git: tools/git.md
           - Docker: tools/docker.md
+          - UV: tools/uv.md
           - Linux: tools/linux.md
           - 图标库: tools/icons.md
           - 小知识: tools/tips.md
@@ -204,5 +209,5 @@ nav:
 extra:
   social:
     - icon: fontawesome/brands/github
-      link: https://github.com/your-username
+      link: https://github.com/evan810
       name: GitHub

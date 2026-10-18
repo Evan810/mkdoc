@@ -1,5 +1,7 @@
 ---
 title: 教程分类
+tags:
+  - 教程
 ---
 
 ## 教程 / Tutorials
