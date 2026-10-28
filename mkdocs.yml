@@ -10,7 +10,7 @@ site_url: https://evan810.github.io/mkdoc/
 # repo_name: GitHub
 # edit_uri: edit/main/docs/
 
-copyright: Copyright &copy; 2025-2026 磊哥 &nbsp;|&nbsp; <a href="https://beian.miit.gov.cn/" target="_blank">鄂ICP备2026058533号-1</a>
+copyright: Copyright &copy; 2025-2026 磊哥 &nbsp;|&nbsp; <a href="https://beian.miit.gov.cn/" target="_blank" rel="noopener">鄂ICP备2026058533号-1</a> &nbsp;|&nbsp; <a href="https://beian.mps.gov.cn/#/query/webSearch?code=42060002000470" target="_blank" rel="noopener"><img src="assets/icons/gongan-beian.png" alt="公安备案" style="height:14px;vertical-align:-2px"> 鄂公网安备42060002000470号</a>
 
 # ============================================================
 # 主题配置
